@@ -1,0 +1,81 @@
+.logged-out{
+    position: relative;
+    // width: 1600px;
+    margin: 0 auto;
+
+    & header{
+        background-color: #FFD178;
+
+        & .wrapper{
+            width: 1600px;
+            margin: 0 auto;
+        }
+    }
+
+    & .content{
+        text-align: center;
+        margin-top: 160px;
+        position: relative;
+
+        
+        & .images{
+            position: absolute;
+            filter: drop-shadow(0 0 5px white);
+
+            & img{
+                display: inline-block;
+                position: absolute;
+            }
+
+            & .beehive{
+                left:-20px;
+                top:30px;
+            }
+
+            & .bee1{
+                width: 21px;
+                top: 140px;
+                left: 80px;
+            }
+
+            & .bee2{
+                width: 33px;
+                left: 220px;
+            }
+
+            & .bee3{
+                width: 61px;
+                top:190px;
+                left: 310px;
+            }
+
+            & .bee4{
+                width: 84px;
+                top: 270px;
+                left: 650px;
+            }
+
+            & .bee5{
+                width: 195px;
+                top:170px;
+                left: 950px
+            }
+        }
+
+
+        & .text{
+            & h1{
+                font-size: 60px;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            & p{
+                font-size: 24px;
+                font-weight: 200;
+                margin: 10px;
+            }
+        }
+        
+    }
+}

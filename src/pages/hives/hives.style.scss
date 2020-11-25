@@ -1,0 +1,10 @@
+.hives{
+    position: relative;
+
+    & .all-hives{
+        width: 660px;
+        margin: 111px auto 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

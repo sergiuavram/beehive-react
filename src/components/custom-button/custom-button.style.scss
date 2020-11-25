@@ -1,0 +1,13 @@
+.custom-button{
+    position: relative;
+    display: inline-block;
+    
+    // & span{
+    //     padding: 8px 15px;
+    // }
+}
+
+.custom-button:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

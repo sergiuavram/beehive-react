@@ -1,0 +1,42 @@
+.custom-input{
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+
+    & input{
+        line-height: 30px;
+        width: 180px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background-color: #F8DEC7;
+        padding: 0 10px; 
+    }
+
+    & input:focus{
+        outline-width: 0;
+        background-color: #f3e2d3;
+    }
+    
+
+    & input::placeholder{  /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: red;
+    }
+
+    & input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+        color: red;
+    }
+
+    & input::-ms-input-placeholder {  /* Microsoft Edge */
+        color: red;
+    }
+
+    .error{
+        position: relative;
+        left: -25px;
+        color: red;
+        font-size: 12px;
+        width: 250px;
+        margin-top: 5px;
+    }
+}

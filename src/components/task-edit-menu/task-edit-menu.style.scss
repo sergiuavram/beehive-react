@@ -1,0 +1,13 @@
+.task-edit-menu{
+    position: absolute;
+    background-color: coral;
+    height: 50px;
+    width: 120px;
+    right: -115px;
+    top:-10px;
+    z-index: 3;
+}
+
+.task-edit-menu:hover{
+    cursor: auto;
+}

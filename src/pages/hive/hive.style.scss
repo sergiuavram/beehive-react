@@ -1,0 +1,52 @@
+.hive{
+    position: relative;
+
+    & h1{
+        margin-left: 10px;
+    }
+
+    & .wrapper{
+        width: 95%;
+        border: 1px solid black;
+        margin: 0 auto;
+        overflow: scroll;
+
+        & .all-lists{
+
+            & .list-wrapper{
+                display: flex;
+
+                & .create-list{
+                    color: #FF6B00;
+                    font-weight: 700;
+                    font-size: 14px;
+                    background-color: rgba(255, 255, 255, 0.40);
+                    height: 35px;
+                    line-height: 35px;
+                    width: 160px;
+                    padding: 0 10px;
+                    margin-left: 10px;
+                    border-radius: 10px;
+                    transition: all 450ms ease;
+                }
+
+                & .create-list:hover{
+                    cursor: pointer;
+                    background-color: rgba(255, 255, 255, 0.80);
+                    transition: all 450ms ease;
+                }
+            }
+        }
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    & .wrapper::-webkit-scrollbar {
+        display: none;
+    }   
+    
+    /* Hide scrollbar for IE, Edge and Firefox */
+    & .wrapper {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    } 
+}

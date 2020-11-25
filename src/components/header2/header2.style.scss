@@ -1,0 +1,44 @@
+.header2{
+    position: relative;
+
+    & header{
+        height: 65px;
+        background-color: #FFD178;
+
+
+        & .logo{
+            left: 50%;
+            margin-left: -25px;
+            position: absolute;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        & .menu{
+            position: absolute;
+            display: inline-block;
+            right: 0;
+
+            & .plus, .notification, .account{
+                position: relative;
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+                background-color: #c4c4c4;
+                margin-top: 15px;
+                margin-right: 21px;
+            }
+
+            & .notification {
+                
+                & img{
+                    display: inline;
+                }
+            }
+
+            & .account{
+                border-radius: 50px;
+            }
+        }
+    }
+}

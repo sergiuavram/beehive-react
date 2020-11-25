@@ -1,0 +1,15 @@
+.task-add{
+    display: block;
+    position: relative;
+    font-size: 14px;
+    color: #909090;
+    transition: all 300ms ease;
+}
+
+.task-add:hover{
+    background-color: gray;
+    color:white;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 300ms ease;
+}
