@@ -17,7 +17,7 @@ const HiveTabAdd = ({ user, createHive }) => {
 
     const redirect = () => {
         // send visitor to hive page when hive is created
-        history.push(`/hive/${hiveName}`)
+        history.push(`/hives/${hiveName}`)
     }
 
     const handleCreateHive = () => {

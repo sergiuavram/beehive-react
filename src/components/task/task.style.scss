@@ -5,34 +5,63 @@
     font-size: 12px;
     margin: 10px 0;
 
-    & img{
+    & .task-edit-menu{
         position: absolute;
-        padding: 2px;
-        width: 15px;
-        right: 10px;
-        top:1px;
-        opacity: 0;
-        border-radius: 2px;
-        transition: all 300ms ease;
+        background-color: coral;
+        // height: 50px;
+        // width: 120px;
+        right: -55px;
+        top:-10px;
+        z-index: 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        border-radius: 5px;
     }
-
-    & img:hover{
-        background-color: red;
-        cursor: pointer;
-        transition: all 100ms ease;
+    
+    & .task-edit-menu:hover{
+        cursor: auto;
     }
 
     & p{
         margin: 0;
         padding: 3px;
     }   
+
+    & .task-menu{
+        width: 21px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 21px;
+        place-items: center;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        opacity: 0;
+        border-radius: 2px;
+        transition: all 300ms ease;
+
+        & .task-dot{
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+            background-color:grey;
+        }
+
+    }
+
+    & .task-menu:hover{
+        background-color: red;
+        cursor: pointer;
+        transition: all 100ms ease;
+    }
 }
 
 .task:hover{
     cursor: default;
 }
 
-.task:hover img{
+.task:hover .task-menu{
     opacity: 1;
     transition: all 300ms ease;
 }

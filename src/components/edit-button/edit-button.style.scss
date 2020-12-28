@@ -1,0 +1,44 @@
+.edit-button{
+    position: relative;
+    transition: all ease 300ms;
+
+    & img{
+        display: block;
+    }
+
+    & img:hover{
+        cursor: pointer;
+    }
+
+    & .change-task{
+        z-index: 4;
+        position: absolute;
+        background-color: #D9C767;
+        padding: 5px;
+        border-radius: 5px;
+
+        & input{
+            padding: 2px 5px;
+            font-size: 13px;
+        }
+
+        & .change-button{
+            margin-top: 5px;
+            padding: 2px 5px;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: rgba(128, 0, 128, 0.4);
+        }
+
+        & .change-button:hover{
+            background-color: rgba(128, 0, 128, 0.8);
+            cursor: pointer;
+        }
+    }
+}
+
+.edit-button:hover{
+    background-color: rgba(128, 0, 128, 0.3);
+    border-radius: 5px;
+    transition: all ease 300ms;
+}

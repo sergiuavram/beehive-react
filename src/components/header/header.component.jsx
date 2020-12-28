@@ -3,12 +3,13 @@ import './header.style.scss';
 
 import { useHistory } from "react-router-dom"
 import { connect } from 'react-redux';
+import { logout } from '../../redux/user/user.action';
 
 import CustomButton from '../custom-button/custom-button.component';
 
 import Logo from '../logo/logo.component';
 
-const Header = ({ user }) => {
+const Header = ({ user, logout }) => {
     const history = useHistory();
 
     const handleLogin = () => {
@@ -21,6 +22,12 @@ const Header = ({ user }) => {
 
     const handleGoToHives = () => {
         history.push('/hives')
+    }
+
+    const handleLogout = () => {
+        logout();
+        console.log('logging out')
+
     }
 
     return (
@@ -39,6 +46,12 @@ const Header = ({ user }) => {
                         handleClick={handleGoToHives}
                         padding='8px 15px'
 
+                    />
+                    <CustomButton
+                        name='Logout'
+                        handleClick={handleLogout}
+                        color='black'
+                        margin='0 0 0 20px'
                     />
                 </div>
                 :
@@ -67,4 +80,8 @@ const mapStateToProps = ({ user }) => ({
     user
 })
 
-export default connect(mapStateToProps)(Header);
+const mapDispathToProps = (dispatch) => ({
+    logout: () => dispatch(logout())
+})
+
+export default connect(mapStateToProps, mapDispathToProps)(Header);

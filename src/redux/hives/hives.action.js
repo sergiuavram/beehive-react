@@ -22,15 +22,33 @@ export const createHive = (hiveName, user, setErrorCreateHive, redirect) => asyn
     }
 }
 
-export const getCurrentHive = (user, hiveName) => async dispatch => {
-    // console.log('hives action:', user);
-    // console.log('hives action:', hiveName);
+export const getHives = (user) => async dispatch => {
     const response = await axios({
-        url: '/get-hive',
+        url: '/get-hives',
         method: 'POST',
         headers: { 'Authorization': `Bearer ${user}` },
-        data: { hiveName }
     })
 
-    // console.log(response)
+    dispatch({
+        type: hivesTypes.GET_HIVES,
+        payload: response.data
+    })
 }
+
+export const deleteHive = (user, data) => async dispatch => {
+    // console.log(data)
+    const response = await axios({
+        url: '/delete-hive',
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${user}` },
+        data: { data }
+    });
+
+    if (response.data.message === 'deleted') {
+        dispatch({
+            type: hivesTypes.DELETE_HIVE,
+            payload: data.hiveName
+        })
+    }
+}
+

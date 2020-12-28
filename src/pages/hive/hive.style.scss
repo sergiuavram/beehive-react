@@ -1,8 +1,20 @@
 .hive{
     position: relative;
 
-    & h1{
-        margin-left: 10px;
+    & .hive-name{
+        display: flex;
+        place-items: center;
+        line-height: 40px;
+        padding: 10px;
+
+        & h1{
+            margin:0 10px 0 0 ;
+            display: inline-block;
+        }
+    }
+
+    & .hive-name:hover{
+        cursor: default;
     }
 
     & .wrapper{
@@ -17,24 +29,71 @@
                 display: flex;
 
                 & .create-list{
-                    color: #FF6B00;
-                    font-weight: 700;
-                    font-size: 14px;
-                    background-color: rgba(255, 255, 255, 0.40);
-                    height: 35px;
-                    line-height: 35px;
-                    width: 160px;
-                    padding: 0 10px;
-                    margin-left: 10px;
-                    border-radius: 10px;
-                    transition: all 450ms ease;
+                    position: relative;
+                    & .create-list-text{
+                        color: #FF6B00;
+                        font-weight: 700;
+                        font-size: 14px;
+                        background-color: rgba(255, 255, 255, 0.40);
+                        height: 35px;
+                        line-height: 35px;
+                        width: 160px;
+                        padding: 0 10px;
+                        margin: 0 0 0 10px;
+                        border-radius: 10px;
+                        transition: all 450ms ease;
+                    }
+
+                    & p:hover{
+                        cursor: pointer;
+                        background-color: rgba(255, 255, 255, 0.80);
+                        transition: all 450ms ease;
+                    }
+
+                    & .create-list-form{
+                        background-color: #FF6B00;
+                        position: absolute;
+                        top:32px;
+                        left: 30px;
+                        border-radius: 5px;
+
+                        & input{
+                            padding: 3px 8px;
+                            margin: 5px;
+                        }
+
+
+                        & .create-list-btn{
+                            color: black;
+                            margin-left: 5px;
+                            margin-bottom: 5px;
+                            padding:  3px 7px;
+                            border-radius: 5px;
+                            display: inline-block;
+                            background-color: #c75300;
+                        }
+
+                        & .create-list-btn:hover{
+                            background-color: #af4a01;
+                            cursor: pointer;
+                        }
+
+                        & p{
+                            color: red;
+                            text-align: center;
+                            margin: 10px;
+                            background-color: #FF6B00;
+                            padding: 0;
+                            line-height: 14px;
+                        }
+                    }
                 }
 
-                & .create-list:hover{
-                    cursor: pointer;
-                    background-color: rgba(255, 255, 255, 0.80);
-                    transition: all 450ms ease;
-                }
+                // & .create-list:hover{
+                //     cursor: pointer;
+                //     background-color: rgba(255, 255, 255, 0.80);
+                //     transition: all 450ms ease;
+                // }
             }
         }
     }

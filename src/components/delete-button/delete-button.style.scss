@@ -1,0 +1,15 @@
+.delete-button{
+    position: relative;
+    transition: all ease 300ms;
+
+    & img{
+        display: block;
+    }
+}
+
+.delete-button:hover{
+    cursor: pointer;
+    background-color: rgba(128, 0, 128, 0.3);
+    border-radius: 5px;
+    transition: all ease 300ms;
+}

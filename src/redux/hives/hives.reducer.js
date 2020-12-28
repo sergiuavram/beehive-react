@@ -1,6 +1,6 @@
 import { hivesTypes } from './hives.type';
 
-const hivesReducer = (state = { hives: [] }, action) => {
+const hivesReducer = (state = { hives: [], activeHive: null }, action) => {
     const { type, payload } = action;
     switch (type) {
         case hivesTypes.CREATE_HIVE:
@@ -8,10 +8,16 @@ const hivesReducer = (state = { hives: [] }, action) => {
             return { hives: [...state.hives, payload] }
         case hivesTypes.GET_HIVES:
             // something with map to update just what wee need
-            return state
-        case hivesTypes.GET_HIVE:
-            // something with map to update just what wee need
-            return state
+            return { ...state, hives: [...payload] };
+        case hivesTypes.DELETE_HIVE:
+            const newHives = state.hives.filter((hive) => {
+                if (hive.Name !== payload) {
+                    return hive
+                } else {
+                    return null
+                }
+            })
+            return { ...state, hives: newHives }
         default:
             return state
     }
